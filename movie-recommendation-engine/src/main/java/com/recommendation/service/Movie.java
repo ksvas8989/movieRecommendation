@@ -1,7 +1,7 @@
 package com.recommendation.service;
 
 /* this call will have all the information about movie */
-public class Movie {
+public class Movie implements Comparable<Movie> {
 
 	private String name;
 	private int releaseYear;
@@ -43,4 +43,25 @@ public class Movie {
 	public String toString(){
 		return name;
 	}
+	
+	
+	@Override
+public boolean equals(Object anObject) {
+    if (this == anObject) {
+        return true;
+    }
+    if (anObject instanceof Movie) {
+        Movie movie = (Movie) anObject;
+       return name.equals(movie.getName());
+    }
+    return false;
 }
+
+	//this will sort the list based on user likes count
+	public int compareTo(Movie movie) {
+		 if(likesCount <= movie.likesCount)  
+			return 1;  
+			else  
+			return -1;  
+			}  
+	}

@@ -9,7 +9,7 @@ public class User {
 	private Stack<String> country;
 	private Stack<String> genre;
 	private boolean isRegisteredUser;
-	private Set<String> watchHistory;
+	private Set<Movie> watchHistory;
 
 
 	public Stack<String> getCountry() {
@@ -36,11 +36,11 @@ public class User {
 		this.isRegisteredUser = isRegisteredUser;
 	}
 
-	public Set<String> getWatchHistory() {
+	public Set<Movie> getWatchHistory() {
 		return watchHistory;
 	}
 
-	public void setWatchHistory(Set<String> watchHistory) {
+	public void setWatchHistory(Set<Movie> watchHistory) {
 		this.watchHistory = watchHistory;
 	}
 	
